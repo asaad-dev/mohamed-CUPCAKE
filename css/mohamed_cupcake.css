@@ -1,0 +1,221 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ajout-au-reset Eric */
+.clear {
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+/* fin du reset */
+
+/* style de page */
+body {
+    background: repeating-linear-gradient(90deg, #E2C9D7, #E2C9D7 20px, #E9D2DF 0, #E9D2DF 40px);
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* container principal */
+#container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    background: #fff;
+}
+
+.header-float h1 {
+    color: #B934A2;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: bold;
+
+}
+
+.header-float {
+    float: right;
+    padding: 20px;
+    text-align: right;
+}
+
+.info {
+    background:#B934A2;
+    color: #fff;
+    padding: 20px 80px;
+    font-size: 1.2rem;
+}
+
+.info small {
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.cupcake {
+    height: 340px;
+    background:#EFE0E8;
+
+}
+
+.cupcake h2 {
+    padding: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* 1er flexbox qui display la premier sectioin qui contient une image, deux balises article  */
+.free-cupcake {
+    display: flex;
+    padding: 20px;
+}
+
+article {
+    margin: 20px;
+} 
+
+article h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+article p {
+    line-height: 1.5em;
+    font-size: 1.em;
+}
+/* le button */
+.button {
+    background-color: #B934A2;
+    border: none;
+    color: white;
+    width: 90px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+.galerie h3 {
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* 2e flexbox qui display la deuxième section qui contient tous les figure et figcaption */
+.figure {
+    display: flex;
+}
+
+.galerie img{
+    max-width: 100%;
+    padding: 0px 15px;
+}
+
+figcaption {
+ background: #F3E5EC;
+ position: relative;
+ bottom: 20px; 
+ margin: 0 15px;
+ padding: 10px;
+}
+
+/* 3e flexbox qui display les 2 sections dans le footer */
+footer {
+    width: 900px;
+    display: flex;
+}
+
+/* le footer contient 2 section - hours + map */
+.footer-hours {
+   background: #EFE0E8;
+   width: 450px;
+   height: 300px;
+   margin-right: 10px;
+}
+
+/* Grid pour display les jours et l'heur dans le footer */
+.hours {
+    display: grid;
+    width: 400px;
+    grid-template-columns: repeat(auto-fill, 180px);
+}
+
+.hours div {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.footer-hours h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    word-spacing: 2px;
+    padding-top: 10px;
+}
+
+.purple {
+    background: #C660B3;
+}
+
+/* le map */
+.footer-map {
+    background: #EFE0E8;
+    width: 450px;
+}
+
+.footer-map img {
+    max-width: 100%;
+}
+
+.footer-map h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    word-spacing: 2px;
+    padding-top: 10px;
+}
+
+.footer-map p {
+    font-style: italic;
+}
