@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -19,7 +19,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -49,7 +49,7 @@ table {
 
 * {
     box-sizing: border-box;
-    
+
 }
 /* fin du reset */
 
@@ -67,6 +67,17 @@ body {
 
 header {
     background: #fff;
+    height: 180px;
+}
+
+header img {
+    margin-left: 10px;
+}
+
+.header-float {
+    float: right;
+    padding: 10px;
+    text-align: right;
 }
 
 .header-float h1 {
@@ -74,21 +85,16 @@ header {
     font-size: 2rem;
     letter-spacing: 2px;
     word-spacing: 2px;
-    font-weight: bold;
-
-}
-
-.header-float {
-    float: right;
-    padding: 20px;
-    text-align: right;
+    font-weight: bolder;
+    line-height: 2em;
 }
 
 .info {
     background:#B934A2;
     color: #fff;
     padding: 20px 80px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.3em;
 }
 
 .info small {
@@ -96,32 +102,38 @@ header {
     line-height: 50px;
 }
 
+/* 2e section */
 .cupcake {
-    height: 340px;
-    background:#EFE0E8;
-
+    /* height: 300px; */
+    background: rgba(253, 246, 250, 0.5);
 }
 
 .cupcake h2 {
-    padding: 30px;
+    padding: 30px 0 5px 20px;
     font-size: 2rem;
     font-weight: bold;
 }
 
+.free-cupcake p {
+    padding: 15px 20px 0;
+}
 /* 1er flexbox qui display la premier sectioin qui contient une image, deux balises article  */
 .free-cupcake {
     display: flex;
     padding: 20px;
 }
-
+.free-cupcake img {
+    /* width: 250px; // pour Chrome*/
+    max-width: 100%;
+}
 article {
     margin: 20px;
-} 
+}
 
 article h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    line-height: 1.5em;
+    line-height: 1.8em;
 }
 article p {
     line-height: 1.5em;
@@ -131,91 +143,122 @@ article p {
 .button {
     background-color: #B934A2;
     border: none;
+    border-radius: 5px;
     color: white;
-    width: 90px;
-    height: 30px;
-    font-size: 16px;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
     text-align: center;
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+      background: #fff;
+      /* background: rgba(250, 216, 242, 0.5); */
+      color: #B934A2;
+      border: 2px solid #B934A2;
+  }
+
+  .galerie {
+    background: rgba(250, 216, 242, 0.5);
   }
 
 .galerie h3 {
     padding: 20px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 /* 2e flexbox qui display la deuxième section qui contient tous les figure et figcaption */
 .figure {
     display: flex;
+    justify-content: center;
+    height: 380px;
 }
 
 .galerie img{
-    max-width: 100%;
-    padding: 0px 15px;
+    max-width: 300px;
+    padding: 0px 20px;
 }
 
 figcaption {
- background: #F3E5EC;
- position: relative;
- bottom: 20px; 
- margin: 0 15px;
+ background: rgba(253, 246, 250, 0.5);
+ margin: 0 20px;
  padding: 10px;
+ height: 100px;
+ position: relative;
+ bottom: 5px;
 }
 
 /* 3e flexbox qui display les 2 sections dans le footer */
 footer {
-    width: 900px;
+    /* width: 900px; */
     display: flex;
 }
 
 /* le footer contient 2 section - hours + map */
 .footer-hours {
-   background: #EFE0E8;
+   background: rgba(253, 246, 250, 0.5);
    width: 450px;
    height: 300px;
    margin-right: 10px;
-}
-
-/* Grid pour display les jours et l'heur dans le footer */
-.hours {
-    display: grid;
-    width: 400px;
-    grid-template-columns: repeat(auto-fill, 180px);
-}
-
-.hours div {
-    margin-top: 10px;
-    padding: 5px;
 }
 
 .footer-hours h3 {
     font-size: 1.2em;
     font-weight: bold;
     word-spacing: 2px;
-    padding-top: 10px;
+    padding: 0px 20px ;
+    line-height: 2em;
+}
+
+.footer-hours p {
+    font-style: italic;
+    padding-left: 20px;
+}
+
+/* Grid pour display les jours et l'heur dans le footer */
+.hours {
+    display: grid;
+    grid-template-columns: 200px 200px; /* repeat(auto-fill, 200px) */
+    margin: 0 15px;
+    padding: 6px;
+}
+
+.align-right {
+    text-align: right;
 }
 
 .purple {
     background: #C660B3;
+    padding: 8px;
 }
 
+.white {
+    background: #fff;
+    padding: 7px;
+}
 /* le map */
 .footer-map {
-    background: #EFE0E8;
+    background: rgba(253, 246, 250, 0.5);
     width: 450px;
+    height: 300px;
 }
 
 .footer-map img {
-    max-width: 100%;
+    max-width: 410px;
+    margin: 5px 15px;
 }
 
 .footer-map h3 {
     font-size: 1.2em;
     font-weight: bold;
     word-spacing: 2px;
-    padding-top: 10px;
+    padding: 0px 20px ;
+    line-height: 2em;
 }
 
 .footer-map p {
     font-style: italic;
+    padding-left: 20px;
 }
